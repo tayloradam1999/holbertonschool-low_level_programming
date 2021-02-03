@@ -2,7 +2,7 @@
 /**
  * main - Entry point, will print a string to stdout
  *
- * Return: Always 0
+ * Return - Always 0
  */
 int main(void)
 {
