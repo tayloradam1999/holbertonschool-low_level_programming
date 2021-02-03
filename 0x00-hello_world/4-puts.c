@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * Main - Entry point, will print a string to stdout
+ * main - Entry point, will print a string to stdout
  *
- * return - Always 0
+ * Return: Always 0
  */
 int main(void)
 {
