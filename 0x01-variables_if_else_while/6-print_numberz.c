@@ -9,11 +9,20 @@
 
 int main(void)
 {
-	int single_digit;
+	int n;
 
-	for (single_digit = 0; single_digit < 10; single_digit++)
-		putchar(single_digit + '0');
+	n = 48;
 
+	while (n <=57 )
+{
+	putchar (n);
+	if (n !=57)
+	{
+		putchar(',');
+		putchar(' ');
+}
+	n++;
+}	
 	putchar('\n');
-	return (0);
+	return(0);
 }

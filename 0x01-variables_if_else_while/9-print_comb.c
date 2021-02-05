@@ -9,18 +9,13 @@
 
 int main(void)
 {
-	int digit;
+	int n = 48;
 
-	for (digit = 0; digit < 10; digit++)
-
-		putchar(digit + '0');
-
-		if (number != 9)
-
-			putchar(',');
-			putchar(' ');
-
-
+	while (n <=57)
+	{
+		putchar (n);
+		if (n != 57)
+		{
 putchar('\n');
 return (0);
 }
