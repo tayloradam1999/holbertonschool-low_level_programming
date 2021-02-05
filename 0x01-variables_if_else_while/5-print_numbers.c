@@ -13,6 +13,6 @@ int main(void)
 	for (digit = 0; digit < 10; digit++)
 		putchar(digit);
 
-	putchar('\n');
+	printf("%d", digit);
 	return (0);
 }
