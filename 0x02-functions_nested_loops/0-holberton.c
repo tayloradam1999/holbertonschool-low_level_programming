@@ -8,12 +8,10 @@
 
 int main(void)
 {
-	char t[10] = "Holberton";
-	int a;
+	int x;
+	char *holberton = "Holberton\n";
 
-	for (a = 0; a <= 8; a++)
-		_putchar(t[a]);
-
-	_putchar('\n');
+	for (x = 0; x < 10; x++)
+		_putchar(holberton[x]);
 	return (0);
 }
