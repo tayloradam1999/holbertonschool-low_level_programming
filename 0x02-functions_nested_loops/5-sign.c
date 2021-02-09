@@ -5,7 +5,7 @@
  *
  * @n: assigns number
  *
- * Return: 9 (random number)
+ * Return: sign
  */
 
 int print_sign(int n)
