@@ -24,7 +24,7 @@ void main(void)
 				printf(" ");
 			}
 		}
-		if (x & 5 == 0 && x % 3 == 0)
+		if (x % 5 == 0 && x % 3 == 0)
 		{
 			printf("FizzBuzz ");
 		}
