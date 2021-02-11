@@ -33,4 +33,5 @@ void main(void)
 			printf("%d ", x);
 		}
 	}
+	printf("\n");
 }
