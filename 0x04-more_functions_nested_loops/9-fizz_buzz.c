@@ -30,8 +30,9 @@ void main(void)
 		}
 		if (x % 5 != 0 && x % 3 != 0)
 		{
-			printf("%d ", x);
+			printf("%i ", x);
 		}
 	}
 	printf("\n");
+	return (0);
 }
