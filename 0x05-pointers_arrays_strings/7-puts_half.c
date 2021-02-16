@@ -15,10 +15,9 @@ void puts_half(char *str)
 	{
 		x++;
 	}
-	if (x % 2 == 1)
+	if (x % 2 != 0)
 	{
-		halfx = (x - 1) / 2;
-		halfx = x - halfx;
+		halfx = (x + 1) / 2;
 	}
 	else
 	{
