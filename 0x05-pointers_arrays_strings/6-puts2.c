@@ -16,5 +16,6 @@ void puts2(char *str)
 		_putchar(*(str + x));
 		x = x + 2;
 	}
+	_putchar('\0');
 	_putchar('\n');
 }
