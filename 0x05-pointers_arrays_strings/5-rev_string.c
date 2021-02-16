@@ -17,7 +17,7 @@ void rev_string(char *s)
 		*(tmp + x) = *(s + x);
 		x++;
 	}
-	x = x -1;
+	x = x - 1;
 	while (x >= 0)
 	{
 		*(s + x) = *(tmp + y);
