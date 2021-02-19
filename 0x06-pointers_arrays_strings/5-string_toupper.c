@@ -6,7 +6,7 @@
  * Return: The string in all uppercase
  */
 
-char *string_toupper(char *str);
+char *string_toupper(char *str)
 {
 	int x;
 
@@ -16,6 +16,7 @@ char *string_toupper(char *str);
 		{
 			str[x] -= 32;
 		}
+	}
 
 	return (str);
 }
