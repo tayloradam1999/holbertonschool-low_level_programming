@@ -10,7 +10,7 @@ char *rot13(char *x)
 {
 	int y = 0;
 	char letter[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char number[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	char number[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int yy;
 
 	for (; x[y] != '\0'; y++)
@@ -20,6 +20,7 @@ char *rot13(char *x)
 			if (x[y] == letter[yy])
 			{
 				x[y] = number[yy];
+				break;
 			}
 		}
 	}
