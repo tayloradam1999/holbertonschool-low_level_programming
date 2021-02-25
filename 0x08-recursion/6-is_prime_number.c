@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- * num - blahblah
- * @x: input
- * @y: input
- * Return: Prime numbers
+ * num - Determins output value
+ * @x: Storing values
+ * @y: Storing values
+ * Return: 1 if prime, 0 if not
  */
 
 int num(int x, int y)
@@ -25,12 +25,11 @@ int num(int x, int y)
 
 /**
  * is_prime_number - Finds prime numbers
- * @n: Input int
- * Return: Int prime numbers
+ * @n: Input int (Number to test)
+ * Return: 1 if prime, 0 if not
  */
 
 int is_prime_number(int n)
 {
 	return (num(n, n));
-
 }

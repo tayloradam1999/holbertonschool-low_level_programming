@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- * num - Returns the Square Root of a number
- * @x: input
- * @y: input
- * Return: The natural square root
+ * num - Determins output value
+ * @x: Square root of y
+ * @y: Number to be tested
+ * Return: num recursion
  */
 
 int num(int x, long y)
@@ -24,9 +24,9 @@ int num(int x, long y)
 }
 
 /**
- * _sqrt_recursion - Evaluates the recursion
- * @n: input
- * Return: blahblah
+ * _sqrt_recursion - Evaluates the recursion in num function
+ * @n: input from main
+ * Return: Square root of an int
  */
 
 int _sqrt_recursion(int n)
