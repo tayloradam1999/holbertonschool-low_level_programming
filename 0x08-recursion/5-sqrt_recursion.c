@@ -9,7 +9,7 @@
  * Return: The natural square root
  */
 
-float num(float x, float y)
+float num(int x, int y)
 {
 	if ((x * x) == y)
 	{
