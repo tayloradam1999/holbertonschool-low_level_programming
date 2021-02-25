@@ -22,21 +22,17 @@ int my_len(char *s)
  * Return: 1 or 0
  */
 
-int my_pal(int x, int y)
+int my_pal(char *s, int x, int y)
 {
-	if (x == y)
+	if (s[x] != s[y])
+	{
+		return (0);
+	}
+	if (x > y)
 	{
 		return (1);
 	}
-	if (x <= y)
-	{
-		return (0);
-	}
-	if (x != y)
-	{
-		return (0);
-	}
-	return (my_pal(x + 1, y - 1));
+	return (my_pal(s, x + 1, y - 1));
 }
 
 /**
@@ -51,5 +47,5 @@ int is_palindrome(char *s)
 
 	y = my_len(s);
 
-	return (my_pal(s[0], s[y - 1]));
+	return (my_pal(s, 0, (y - 1)));
 }
