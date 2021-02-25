@@ -19,6 +19,7 @@ int my_len(char *s)
  * my_pal - Determins if palindrome
  * @x: Starts at beginning of string
  * @y: Starts at end of string
+ * @s: String in question
  * Return: 1 or 0
  */
 
