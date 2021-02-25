@@ -17,19 +17,26 @@ int my_len(char *s)
 
 /**
  * my_pal - Determins if palindrome
- * @s: String
  * @x: Starts at beginning of string
  * @y: Starts at end of string
  * Return: 1 or 0
  */
 
-int my_pal(char *s, int x, int y)
+int my_pal(int x, int y)
 {
-	if (s[x] != s[y])
+	if (x == y)
+	{
+		return (1);
+	}
+	if (x <= y)
 	{
 		return (0);
 	}
-	return (my_pal(s, x + 1, y - 1));
+	if (x != y)
+	{
+		return (0);
+	}
+	return (my_pal(x + 1, y - 1));
 }
 
 /**
@@ -42,5 +49,7 @@ int is_palindrome(char *s)
 {
 	int y;
 
-	y = my_len;
+	y = my_len(s);
+
+	return (my_pal(s[0], s[y - 1]));
 }
