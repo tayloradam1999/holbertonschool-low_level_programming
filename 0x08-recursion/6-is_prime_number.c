@@ -3,24 +3,21 @@
 /**
  * num - Determins output value
  * @x: Storing values
- * @y: Storing values
+ * @n: Storing values
  * Return: 1 if prime, 0 if not
  */
 
-int num(int x, int y)
+int num(int n, int x)
 {
-	float p = y / x;
-	int pp = p;
-
-	if (x == 1)
-	{
-		return (1);
-	}
-	if ((p - pp) == 0)
+	if (n % x == 0)
 	{
 		return (0);
 	}
-	return (num((x - 1), y));
+	if (x > (n / 2))
+	{
+		return (1);
+	}
+	return (num(n, (x + 1)));
 }
 
 /**
@@ -31,5 +28,9 @@ int num(int x, int y)
 
 int is_prime_number(int n)
 {
-	return (num(n, n));
+	if (n <= 1)
+	{
+		return (0);
+	}
+	return (num(n, 2));
 }
