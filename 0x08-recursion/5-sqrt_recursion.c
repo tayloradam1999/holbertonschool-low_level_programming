@@ -7,13 +7,13 @@
  * Return: The natural square root
  */
 
-int num(int x, int y)
+int num(int x, long y)
 {
 	if ((x * x) == y)
 	{
 		return (x);
 	}
-	if (x < 0)
+	if (x <= 0)
 	{
 		return (-1);
 	}
