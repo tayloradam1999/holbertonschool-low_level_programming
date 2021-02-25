@@ -31,7 +31,7 @@ int num(int x, long y)
 
 int _sqrt_recursion(int n)
 {
-	if (num(n, n) == -1)
+	if (num(n, n) <= -1)
 	{
 		return (-1);
 	}
