@@ -1,15 +1,13 @@
 #include "holberton.h"
 
 /**
- * _sqrt_recursion - Returns the Square Root of a number
- * @n: Number to find the square root of
- * num - sqrt function
+ * num - Returns the Square Root of a number
  * @x: input
  * @y: input
  * Return: The natural square root
  */
 
-float num(int x, int y)
+int num(int x, int y)
 {
 	if ((x * x) == y)
 	{
@@ -25,6 +23,11 @@ float num(int x, int y)
 	}
 }
 
+/**
+ * _sqrt_recursion - Evaluates the recursion
+ * @n: input
+ * Return: blahblah
+ */
 
 int _sqrt_recursion(int n)
 {
