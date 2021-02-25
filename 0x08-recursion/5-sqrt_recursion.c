@@ -13,14 +13,11 @@ int num(int x, long y)
 	{
 		return (x);
 	}
-	if (x <= 0)
+	if ((x * x) > y)
 	{
 		return (-1);
 	}
-	else
-	{
-		return (num((x - 1), y));
-	}
+	return (num((x + 1), y));
 }
 
 /**
@@ -31,12 +28,13 @@ int num(int x, long y)
 
 int _sqrt_recursion(int n)
 {
-	if (num(n, n) <= -1)
+	if (n == 0)
+	{
+		return (0);
+	}
+	if (n < 0)
 	{
 		return (-1);
 	}
-	else
-	{
-		return (num(n, n));
-	}
+	return (num(1, n));
 }
