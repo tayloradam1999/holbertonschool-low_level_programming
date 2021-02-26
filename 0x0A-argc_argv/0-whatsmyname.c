@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "holberton.h"
 
 /**
  * main - Prints the program name followed by a new line.
