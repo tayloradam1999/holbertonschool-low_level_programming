@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 {
 	int num;
 	int coins = 0;
- 
+
 	if (argc != 2)
 	{
 		printf("Error\n");
