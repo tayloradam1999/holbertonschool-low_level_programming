@@ -31,12 +31,13 @@ char *_strdup(char *str)
 	char *s;
 	unsigned int x;
 
-	s = (char *)malloc(_strlen(str) + 1 * sizeof(char));
-
 	if (str == NULL)
 	{
 		return (NULL);
 	}
+
+	s = (char *)malloc(_strlen(str) * sizeof(char));
+
 	if (s == NULL)
 	{
 		return (NULL);
@@ -45,6 +46,5 @@ char *_strdup(char *str)
 	{
 		s[x] = str[x];
 	}
-	s[x] = '\0';
 	return (s);
 }
