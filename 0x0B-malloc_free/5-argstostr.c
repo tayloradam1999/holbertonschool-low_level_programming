@@ -55,16 +55,13 @@ char *argstostr(int ac, char **av)
 		y = 0;
 		while (av[x][y])
 		{
-			*(p + z) = av[x][y];
+			p[z] = av[x][y];
 			z++;
 			y++;
 		}
-
-		*(p + z) = '\n';
+		p[z] = '\n';
 		z++;
-
 	}
-
-	*(p + z) = '\0';
+	p[z] = '\0';
 	return (p);
 }
