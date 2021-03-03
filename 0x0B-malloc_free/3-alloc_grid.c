@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * alloc_grind - Returns a pointer to a 2 dimensional array
+ * alloc_grid - Returns a pointer to a 2 dimensional array
  * of pointers
  * @width: Width of array
  * @height: Height of array
@@ -15,6 +15,11 @@ int **alloc_grid(int width, int height)
 	int len = 0;
 	int *ptr, **arr;
 	int x, y;
+
+	if (width <= 0 || height <= 0)
+	{
+		return (NULL);
+	}
 
 	len = sizeof(int *) * height + sizeof(int) * height * width;
 
