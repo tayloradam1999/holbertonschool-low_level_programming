@@ -20,7 +20,7 @@ int _strlen(char *s)
 }
 
 /**
- * argtostr - Concatenates all args
+ * argstostr - Concatenates all args
  * @ac: Argc
  * @av: argv[]
  * Return: All strings combined
@@ -28,7 +28,7 @@ int _strlen(char *s)
 
 char *argstostr(int ac, char **av)
 {
-	int x, y, z;
+	int x, y, z = 0;
 	int size = 0;
 	char *p;
 
@@ -42,14 +42,14 @@ char *argstostr(int ac, char **av)
 		size = size + _strlen(av[x]) + 1;
 	}
 
-	p = malloc(size * sizeof(char) + 1); /* no need to int* and +1 for null byte */
+	p = malloc(size * sizeof(char) + 1); /* no need to int* + add null */
 
 	if (p == NULL)
 	{
 		return (NULL);
 	}
 
-	
+
 	for (x = 0; x < ac; x++)
 	{
 		y = 0;
