@@ -62,7 +62,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (y = 0; y < n; y++)
 	{
 		s[x] = s2[y];
-		x++;
+		x++; /* could just use s[x++] = instead of adding this line */
 	}
 	s[x] = '\0';
 
