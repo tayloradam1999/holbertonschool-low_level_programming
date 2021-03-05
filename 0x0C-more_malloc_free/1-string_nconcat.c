@@ -48,6 +48,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 	s = malloc(sizeof(char) * _strlen(s1) + n + 1);
+	/* s = malloc((unsigned int) * _strlen(s1) + n + 1); works too */
 
 	if (s == NULL)
 	{
