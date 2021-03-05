@@ -6,7 +6,7 @@
  * _memset - Copies a given char
  * @s: Given string to be copied
  * @b: Input
- * @n: Number of bytes 
+ * @n: Number of bytes
  * Return: Copied string
  */
 
