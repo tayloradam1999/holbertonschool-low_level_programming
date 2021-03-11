@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "function_pointers.h"
+#include "3-calc.h"
 
 /**
  * main - function to make calculations
@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
+	int (*i)(int, int);
 
 	if (argc != 4)
 	{
@@ -19,13 +19,13 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	i = (*get_op_func(argv[2]))(atoi(argv[1]), atoi(argv[3]));
+	i = (*get_op_func(argv[2]));
 	if (i == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	printf("%d\n", i);
+	printf("%d\n", i(atoi(argv[1]), atoi(argv[3])));
 
 	return (0);
 }

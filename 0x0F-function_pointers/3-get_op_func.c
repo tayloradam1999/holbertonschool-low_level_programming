@@ -1,4 +1,4 @@
-#include "function_pointers.h"
+#include "3-calc.h"
 
 /**
  * get_op_func - get an operation
@@ -20,7 +20,7 @@ int (*get_op_func(char *s))(int, int)
 
 	while (ops[x].op)
 	{
-		if (strcmp(s, ops[x].op) && (s[1] == '\0'))
+		if ((s[0] == ops[x].op[0]) && (s[1] == '\0'))
 		{
 			return (ops[x].f);
 		}
