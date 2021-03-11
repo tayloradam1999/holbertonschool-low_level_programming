@@ -21,9 +21,10 @@ int sum_them_all(const unsigned int n, ...)
 		return (0);
 	}
 
-	for (count = 0; count <= n; count++)
+	for (count = 0; count < n; count++)
 	{
 		sum += va_arg(list, int);
 	}
+	va_end(list);
 	return (sum);
 }
