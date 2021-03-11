@@ -23,11 +23,12 @@ int op_sub(int a, int b)
 {
 	return (a - b);
 }
+
 /**
  * op_mul - Multiplication function
  * @a: First int to mult
  * @b: Second int to mult
- * @Return: a * b
+ * Return: a * b
  */
 
 int op_mul(int a, int b)
