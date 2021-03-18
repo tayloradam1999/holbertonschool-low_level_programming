@@ -2,7 +2,12 @@
 #define SINGLY_LISTS
 #include <stdio.h>
 #include <stdlib.h>
-
+/**
+ * struct sllist - Structure used for singly linked lists?
+ * @str: char * inside node
+ * @len: Length of list
+ * @next: Node after what we are pointing to
+ */
 typedef struct sllist
 {
 	char *str;
