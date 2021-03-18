@@ -1,7 +1,7 @@
 #ifndef SINGLY_LISTS
 #define SINGLY_LISTS
 #include <stdio.h>
-#include <stdlib.>
+#include <stdlib.h>
 
 typedef struct sllist
 {
