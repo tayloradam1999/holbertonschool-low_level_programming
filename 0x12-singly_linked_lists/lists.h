@@ -1,9 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
 #ifndef SINGLY_LISTS
 #define SINGLY_LISTS
+#include <stdio.h>
+#include <stdlib.>
 
-typedef struct sllist {
+typedef struct sllist
+{
 	char *str;
 	unsigned int len;
 	struct sllist *next;
