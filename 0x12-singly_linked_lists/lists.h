@@ -4,7 +4,7 @@
 #define SINGLY_LISTS
 
 typedef struct sllist {
-	char *data;
+	char *str;
 	unsigned int len;
 	struct sllist *next;
 } list_t;
