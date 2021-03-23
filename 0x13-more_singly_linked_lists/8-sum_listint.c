@@ -11,7 +11,7 @@ int sum_listint(listint_t *head)
 	listint_t *new_node;
 	int sum;
 
-	if (*head == NULL)
+	if (head == NULL)
 		return (0);
 
 	new_node = head;
