@@ -1,5 +1,5 @@
 #include "lists.h"
-
+size_t listint_len(const listint_t *h);
 /**
  * get_nodeint_at_index - Returns the nth node of a linekd list
  * @head: Pointer to head
