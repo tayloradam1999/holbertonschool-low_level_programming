@@ -26,6 +26,12 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	return (new_node);
 }
 
+/**
+ * listint_len - finds length of list
+ * @h: Pointer to head
+ * Return: Length
+ */
+
 size_t listint_len(const listint_t *h)
 {
 	size_t x = 0;
