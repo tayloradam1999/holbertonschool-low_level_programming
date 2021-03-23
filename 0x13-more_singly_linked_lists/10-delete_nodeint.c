@@ -12,6 +12,9 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	listint_t *new_node, *trav;
 	unsigned int x = 0, y = 0;
 
+	if (*head == NULL)
+		return (-1);
+
 	trav = *head;
 	while (trav)
 	{
