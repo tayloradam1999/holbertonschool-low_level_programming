@@ -33,8 +33,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	{
 		for (x = 0; trav != NULL && x < (index - 1); x++)
 			trav = trav->next;
-		if (trav == NULL || trav->next == NULL)
-			return (-1);
 		new_node = trav->next->next;
 		free(trav->next);
 		trav->next = new_node;
