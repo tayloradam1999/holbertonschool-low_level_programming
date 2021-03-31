@@ -1,61 +1,43 @@
 #include "holberton.h"
 
+/**
+ * main - Copies the contents of one file to another non-existing file
+ * @argc: Number of arguments passed
+ * @argv: Array of passed arguments
+ * Return: 0
+ */
+
 int main(int argc, char *argv[])
 {
-	int fp, fp1, cCheck, cCheck1, rCheck;
-	ssize_t write_Check;
-	char *buf;
+	int inputFd, outputFd;
+	ssize_t numRead;
+	char buf[BUF_SIZE];
 
 	if (argc != 3)
+	{dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97); }
+	inputFd = open(argv[1], O_RDONLY);
+	if (inputFd == -1)
+		{dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98); }
+	outputFd = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	if (outputFd == -1)
+	{dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99); }
+	while ((numRead = read(inputFd, buf, BUF_SIZE)) > 0)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
+		if (write(outputFd, buf, numRead) != numRead)
+		{dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			exit(99); }
 	}
-	buf = malloc(1024);
-	if (!buf)
-		return (0);
-	fp1 = open(argv[1], O_RDONLY);
-	if (!fp1 || fp1 == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-	fp = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0661);
-	if (!fp || fp == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]);
-		exit(99);
-	}
-	rCheck = read(fp1, buf, 1024);
-	while (rCheck != 0)
-	{
-		write_Check = write(fp, buf, _strlen(buf));
-		if (write_Check == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]);
-			close(fp);
-			close(fp1);
-			exit(99);
-		}
-		free(buf);
-		buf = malloc(1024);
-		if (!buf)
-			return (0);
-		rCheck = read(fp1, buf, 1024);
-	}
-	cCheck = close(fp);
-	cCheck1 = close(fp1);
-	if (cCheck == -1)
-	{
-		dprintf(STDERR_FILENO, "Error, Can't close fd%d\n", fp);
-		close(fp);
-		exit(100);
-	}
-	if (cCheck1 == -1)
-	{
-		dprintf(STDERR_FILENO, "Error, Can't close fd%d\n", fp1);
-		close(fp1);
-		exit(100);
-	}
+	if (numRead == -1)
+	{dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98); }
+	if (close(inputFd) == -1)
+	{dprintf(STDERR_FILENO, "Error, Can't close fd %s\n", argv[1]);
+		exit(100); }
+	if (close(outputFd) == -1)
+	{dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", argv[2]);
+		exit(100); }
 	return (0);
 }

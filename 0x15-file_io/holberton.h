@@ -34,3 +34,7 @@ ssize_t _strlength(char *s)
 }
 
 #endif
+
+#ifndef BUF_SIZE
+#define BUF_SIZE 1024
+#endif
