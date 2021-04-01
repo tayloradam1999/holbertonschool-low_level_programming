@@ -1,13 +1,6 @@
 #include "holberton.h"
 
 /**
- * read_textfile - Reads a text file and prints it to the POSIX standard output
- * @filename: Our file's name
- * @letters: Number of letters it should read and print
- * Return: Actual number of letters it could read and print
- */
-
-/**
  * _strlen - finds length of string
  * @s: String
  * Return: length
@@ -21,6 +14,13 @@ ssize_t _strlen(char *s)
 		;
 	return (x);
 }
+
+/**
+ * read_textfile - Reads a text file and prints it to the POSIX standard output
+ * @filename: Our file's name
+ * @letters: Number of letters it should read and print
+ * Return: Actual number of letters it could read and print
+ */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {

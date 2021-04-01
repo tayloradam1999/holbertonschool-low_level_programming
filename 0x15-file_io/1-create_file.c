@@ -1,14 +1,6 @@
 #include "holberton.h"
 
 /**
- * create_file - Creates a file
- * @filename: Name of the file to create and text_content is a NULL
- * terminated string to write to the file
- * @text_content: What is going inside the file
- * Return: 1 on success, -1 on failure
- */
-
-/**
  * _strlen - finds length of string
  * @s: String
  * Return: Length
@@ -22,6 +14,13 @@ ssize_t _strlen(char *s)
 		;
 	return (x);
 }
+
+/**
+ * create_file - Creates a file
+ * @filename: Name of the file to create
+ * @text_content: What is going inside the file
+ * Return: 1 on success, -1 on failure
+ */
 
 int create_file(const char *filename, char *text_content)
 {

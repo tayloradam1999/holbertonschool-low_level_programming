@@ -1,13 +1,6 @@
 #include "holberton.h"
 
 /**
- * append_text_to_file - Appends text to a file
- * @filename: Name of the file
- * @text_content: Null terminated string to add to end of file
- * Return: 1 on success, 1 on failure
- */
-
-/**
  * _strlen - finds length of string
  * @s: String
  * Return: length
@@ -22,6 +15,12 @@ int _strlen(char *s)
 	return (x);
 }
 
+/**
+ * append_text_to_file - Appends text to a file
+ * @filename: Name of the file
+ * @text_content: Null terminated string to add to the end of file
+ * Return: 1 on success, 1 on failure
+ */
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd;
