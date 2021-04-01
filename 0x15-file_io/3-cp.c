@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
 	int inputFd, outputFd;
 	ssize_t numRead;
-	char buf[BUF_SIZE];
+	char buf[1024];
 
 	if (argc != 3)
 	{dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -24,7 +24,8 @@ int main(int argc, char *argv[])
 	if (outputFd == -1)
 	{dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99); }
-	while ((numRead = read(inputFd, buf, BUF_SIZE)) > 0)
+	while ((numRead = read(inputFd, buf, 1024)) > 0)
+	/* Only enters while loop if read is succesful, then goes to write */
 	{
 		if (write(outputFd, buf, numRead) != numRead)
 		{dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
