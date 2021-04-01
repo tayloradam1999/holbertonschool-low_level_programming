@@ -7,6 +7,21 @@
  * Return: Actual number of letters it could read and print
  */
 
+/**
+ * _strlen - finds length of string
+ * @s: String
+ * Return: length
+ */
+
+ssize_t _strlen(char *s)
+{
+	ssize_t x = 0;
+
+	for (; s[x]; x++)
+		;
+	return (x);
+}
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t fd;

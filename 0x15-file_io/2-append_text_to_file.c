@@ -7,6 +7,21 @@
  * Return: 1 on success, 1 on failure
  */
 
+/**
+ * _strlen - finds length of string
+ * @s: String
+ * Return: length
+ */
+
+int _strlen(char *s)
+{
+	int x = 0;
+
+	for (; s[x]; x++)
+		;
+	return (x);
+}
+
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd;
@@ -23,19 +38,4 @@ int append_text_to_file(const char *filename, char *text_content)
 	}
 	write(fd, text_content, _strlen(text_content));
 	return (1);
-}
-
-/**
- * _strlen - finds string length
- * @s: String
- * Return: Length
- */
-
-ssize_t _strlen(char *s)
-{
-	ssize_t x = 0;
-
-	for (; s[x]; x++)
-		continue;
-	return (x);
 }

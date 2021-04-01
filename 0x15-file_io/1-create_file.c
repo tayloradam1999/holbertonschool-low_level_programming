@@ -8,6 +8,21 @@
  * Return: 1 on success, -1 on failure
  */
 
+/**
+ * _strlen - finds length of string
+ * @s: String
+ * Return: Length
+ */
+
+ssize_t _strlen(char *s)
+{
+	ssize_t x = 0;
+
+	for (; s[x]; x++)
+		;
+	return (x);
+}
+
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
@@ -28,18 +43,4 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	close(fd);
 	return (1);
-}
-
-/**
- * _strlen - Finds length of a string
- * @s: String
- * Return: Length
- */
-ssize_t _strlen(char *s)
-{
-	ssize_t x = 0;
-
-	for (; s[x]; x++)
-		continue;
-	return (x);
 }
