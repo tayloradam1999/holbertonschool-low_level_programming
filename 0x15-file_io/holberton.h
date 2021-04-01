@@ -29,7 +29,7 @@ ssize_t _strlength(char *s)
 	ssize_t x = 0;
 
 	for (; s[x]; x++)
-		continue;
+		;
 	return (x);
 }
 
