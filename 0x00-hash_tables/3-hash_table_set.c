@@ -12,14 +12,17 @@ hash_node_t *ht_newpair(const char *key, const char *value)
 	hash_node_t *newpair;
 
 	newpair = malloc(sizeof(hash_node_t));
-	if (newpair == NULL)
+	if (!newpair)
 		return (NULL);
+
 	newpair->key = strdup(key);
-	if (newpair->key == NULL)
+	if (!newpair->key)
 		return (NULL);
+
 	newpair->value = strdup(value);
-	if (newpair->value == NULL)
+	if (!newpair->value)
 		return (NULL);
+
 	newpair->next = NULL;
 	return (newpair);
 }
@@ -39,13 +42,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *next = NULL;
 	hash_node_t *last = NULL;
 
-	if (ht == NULL)
+	if (!ht)
 		return (0);
 
 	idx = key_index((const unsigned char *)key, ht->size);
 	next = ht->array[idx];
 
-	if (next != NULL && next->key != NULL && strcmp(key, next->key) > 0)
+	if (next && next->key && strcmp(key, next->key) == 0)
 	{
 		free(next->value);
 		next->value = strdup(value);
